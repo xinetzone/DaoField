@@ -48,3 +48,5 @@
 pip install dao-field
 ```
 
+## on-air
+- [fastapi 支持](https://asia-south.on-air.io/xinetzone/test/)
