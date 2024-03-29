@@ -1,0 +1,30 @@
+name: Generate clients
+on: push
+jobs:
+  generate-python-client:
+    runs-on: ubuntu-latest
+    name: Example
+    steps:
+    - uses: actions/checkout@main
+    - name: Set up Python 3
+      uses: actions/setup-python@main
+      with:
+        python-version: 3.11
+
+    - name: Install 
+      run: >-
+        python -m
+        pip install .[doc]
+
+    # Generate your openapi document (if you don't write it manually)
+
+    # Use the action to generate a client package
+    # This uses all defaults (latest version, openapi.json in the current workspace, no configuration)
+    - name: Generate Python Client
+      uses: openapi-generators/openapi-python-client-action@v2
+
+    # Do something with the generated client (likely publishing it somewhere)
+    # Here we assume that the info/title in the openapi document was "example-project"
+    - name: Do something with the client
+      run: |
+        cd example-project-client

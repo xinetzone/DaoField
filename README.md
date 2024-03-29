@@ -45,6 +45,6 @@
 支持 PyPI：
 
 ```sh
-pip install dao_field
+pip install dao-field
 ```
 
