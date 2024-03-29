@@ -1,0 +1,6 @@
+fastapi
+nicegui
+uvicorn
+pywebview 
+nicegui 
+

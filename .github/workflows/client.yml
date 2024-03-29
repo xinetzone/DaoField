@@ -23,14 +23,6 @@ jobs:
     - name: Generate OpenAPI document 
       run: curl localhost:8000/openapi.json > openapi.json
 
-    - name: Cleanup old client
-      run: rm -rf typescript-fetch-client/
-
-    - name: Generate new client
-      uses: openapi-generators/openapitools-generator-action@v1
-      with:
-        generator: typescript-fetch
-
     # - name: Commit new client
     #   run: |
     #     git config --global user.name 'xinetzone'

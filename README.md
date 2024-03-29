@@ -49,4 +49,15 @@ pip install dao-field
 ```
 
 ## on-air
+
 - [fastapi 支持](https://asia-south.on-air.io/xinetzone/test/)
+
+## Deta 部署
+
+```bash
+space login
+space new
+space push
+space release
+```
+

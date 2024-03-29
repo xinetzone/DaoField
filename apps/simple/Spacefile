@@ -1,0 +1,9 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: simple
+    src: ./
+    engine: python3.9
+    # primary: true
+    run: uvicorn main:app --port 8000
+    dev: uvicorn main:app --reload --port 8000
