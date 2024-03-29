@@ -1,0 +1,48 @@
+/* Background of stsable should be green */
+#version_switcher a[data-version-name*="stable"] {
+  background-color: #e2ffe2;
+}
+
+/* Color of explicit versions should be orange */
+#version_switcher a:not([data-version-name*="stable"]):not([data-version-name="dev"]) {
+  background-color: #f8f9fa;
+  color: grey;
+}
+
+/* If we're on a dev version, make the switcher button orange */
+#version_switcher_button[data-active-version-name*="dev"] {
+  background-color: rgb(255 138 62);
+}
+
+blockquote.epigraph {
+  background-color: antiquewhite;
+}
+
+.dfn {
+  background-color: rgb(205, 214, 71);
+}
+
+caption {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  color: #61aced;
+  text-align: left;
+  caption-side: top;
+}
+
+.topic {
+  border: 1px solid #ccc;
+  padding: 7px;
+  margin: 10px 0 10px 0;
+}
+
+.topic-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 10px;
+  border-bottom: ridge rebeccapurple;
+}
+
+.bd-sidebar-primary, .bd-sidebar-secondary {
+  background-color: #e4e7eb;
+}

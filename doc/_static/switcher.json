@@ -1,0 +1,12 @@
+[
+  {
+    "name": "main",
+    "version": "main",
+    "url": "https://xinetzone.github.io/xbook/"
+  },
+  {
+    "name": "dev",
+    "version": "latest",
+    "url": "https://xbook.readthedocs.io/zh/latest/"
+  }
+]
