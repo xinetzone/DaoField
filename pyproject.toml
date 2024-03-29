@@ -12,8 +12,8 @@ requires-python = ">=3.10"
 
 dependencies = [
   "d2py",
-  # "attrs",
-  # "importlib-metadata>=4.12"
+  "fastapi",
+  "nicegui"
 ]
 
 maintainers = [
