@@ -41,7 +41,7 @@ extensions = [
     "sphinx_comments",
     'sphinx.ext.autosummary',
     "sphinx.ext.viewcode",
-    "sphinxcontrib.bibtex",
+    # "sphinxcontrib.bibtex",
     'sphinx.ext.autosectionlabel',
     "sphinx.ext.graphviz",
     "sphinx.ext.viewcode",
