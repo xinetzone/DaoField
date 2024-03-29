@@ -20,7 +20,7 @@ if sys.platform == 'win32':
     import asyncio
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-project = 'dao_field'
+project = 'DaoField'
 copyright = '2022, xinetzone'
 author = 'xinetzone'
 
@@ -144,7 +144,7 @@ intersphinx_mapping = {
 
 # ``pydata-sphinx-theme`` 配置
 # Define the json_url for our version switcher.
-json_url = 'https://xinetzone.github.io/dao_field/_static/switcher.json'
+json_url = 'https://xinetzone.github.io/DaoField/_static/switcher.json'
 
 version = release
 
@@ -153,14 +153,14 @@ if "dev" in version:
     switcher_version = "dev"
 elif "rc" in version:
     switcher_version = version.split("rc")[0] + " (rc)"
-html_baseurl = "https://xinetzone.github.io/dao_field"
+html_baseurl = "https://xinetzone.github.io/DaoField"
 autosummary_generate = True
 html_theme_options = {
     "switcher": {
         "json_url": json_url,
         "version_match": switcher_version
     },
-    "github_url": "https://github.com/xinetzone/dao_field",
+    "github_url": "https://github.com/xinetzone/DaoField",
     "use_edit_page_button": True,
     "show_nav_level": 0,
     "show_toc_level": 0,
@@ -245,7 +245,7 @@ html_sidebars = {
 
 html_context = {
     "github_user": "xinetzone",
-    "github_repo": "dao_field",
+    "github_repo": "DaoField",
     "github_version": "main",
     "doc_path": "doc",
 }
@@ -268,7 +268,7 @@ comments_config = {
     "hypothesis": True,
     "dokieli": False,
     "utterances": {
-        "repo": "xinetzone/dao_field",
+        "repo": "xinetzone/DaoField",
         "optional": "config",
     }
 }

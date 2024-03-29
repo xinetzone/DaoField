@@ -2,11 +2,11 @@
   {
     "name": "main",
     "version": "main",
-    "url": "https://xinetzone.github.io/daoField/"
+    "url": "https://xinetzone.github.io/DaoField/"
   },
   {
     "name": "dev",
     "version": "latest",
-    "url": "https://daoField.readthedocs.io/zh/latest/"
+    "url": "https://DaoField.readthedocs.io/zh/latest/"
   }
 ]
