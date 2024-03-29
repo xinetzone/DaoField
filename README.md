@@ -15,8 +15,8 @@
 
 道可道。
 
-[pypi-badge]: https://img.shields.io/pypi/v/DaoField.svg
-[pypi-link]: https://pypi.org/project/DaoField/
+[pypi-badge]: https://img.shields.io/pypi/v/dao_field.svg
+[pypi-link]: https://pypi.org/project/dao_field/
 [issue-badge]: https://img.shields.io/github/issues/xinetzone/DaoField
 [issue-link]: https://github.com/xinetzone/DaoField/issues
 [fork-badge]: https://img.shields.io/github/forks/xinetzone/DaoField
@@ -31,12 +31,12 @@
 [watcher-link]: https://github.com/xinetzone/DaoField/watchers
 [binder-badge]: https://mybinder.org/badge_logo.svg
 [binder-link]: https://mybinder.org/v2/gh/xinetzone/DaoField/main
-[install-badge]: https://img.shields.io/pypi/dw/DaoField?label=pypi%20installs
-[install-link]: https://pypistats.org/packages/DaoField
-[status-badge]: https://readthedocs.org/projects/DaoField/badge/?version=latest
-[status-link]: https://DaoField.readthedocs.io/zh/latest/?badge=latest
-[download-badge]: https://pepy.tech/badge/DaoField
-[download-link]: https://pepy.tech/project/DaoField
+[install-badge]: https://img.shields.io/pypi/dw/dao_field?label=pypi%20installs
+[install-link]: https://pypistats.org/packages/dao_field
+[status-badge]: https://readthedocs.org/projects/dao_field/badge/?version=latest
+[status-link]: https://daofield.readthedocs.io/zh-cn/latest/?badge=latest
+[download-badge]: https://pepy.tech/badge/dao_field
+[download-link]: https://pepy.tech/project/dao_field
 
 ## PyPI
 
