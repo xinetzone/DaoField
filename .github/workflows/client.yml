@@ -31,10 +31,10 @@ jobs:
       with:
         generator: typescript-fetch
 
-    - name: Commit new client
-      run: |
-        git config --global user.name 'xinetzone'
-        git config --global user.email 'xinzone@outlook.com'
-        git add typescript-fetch-client/
-        git commit -am "Update typescript client"
-        git push
+    # - name: Commit new client
+    #   run: |
+    #     git config --global user.name 'xinetzone'
+    #     git config --global user.email 'xinzone@outlook.com'
+    #     git add typescript-fetch-client/
+    #     git commit -am "Update typescript client"
+    #     git push
