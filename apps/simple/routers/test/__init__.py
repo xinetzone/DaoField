@@ -20,9 +20,3 @@ def page():
             intro.callback()
         with ui.tab_panel(text_tab):
             text.text_intro()
-            # create_doc(create_label)
-    # with ui.left_drawer(top_corner=True, bottom_corner=True).style('background-color: #d7e3f4'):
-    #     ui.label('LEFT DRAWER')
-    # with ui.right_drawer(fixed=False).style('background-color: #ebf1fa').props('bordered') as right_drawer:
-    #     ui.label('RIGHT DRAWER')
-    
