@@ -156,94 +156,42 @@ elif "rc" in version:
 html_baseurl = "https://xinetzone.github.io/DaoField"
 autosummary_generate = True
 
-html_theme_options = {
-    "launch_buttons": {"thebelab": True},
-    "navigation_with_keys": False,  # To prevent an unnecessary warning
-    "switcher": {
-        "json_url": json_url,
-        "version_match": switcher_version
-    },
-    "github_url": "https://github.com/xinetzone/DaoField",
-    "use_edit_page_button": True,
-    "show_nav_level": 0,
-    "show_toc_level": 0,
-    "navigation_with_keys": True,
-    "collapse_navigation": False,
-    "navbar_align": "content", # "right", "left", "content"
-    "navbar_start": "navbar-logo.html",
-    "navbar_center": "navbar-nav.html",
-    "navbar_end": ["theme-switcher", "version-switcher", "navbar-icon-links"],
-    # "page_sidebar_items": [], # 删除右侧边栏
-    "footer_start": ["copyright", "sphinx-version"],
-    "footer_end": ["last-updated", ],
-    # 图标可以参考 https://fontawesome.com/icons
-    "icon_links": [
-        # {
-        #     "name": "GitHub",
-        #     "url": "https://github.com/xinetzone/tvm-book",
-        #     "icon": "fa-brands fa-square-github",
-        #     "type": "fontawesome",
-        # },
-        {
-            "name": "知乎",
-            "url": "https://www.zhihu.com/people/xinetzone",
-            "icon": "fa-brands fa-zhihu",
-            "type": "fontawesome",
-        },
-        {
-            "name": "简书",
-            "url": "https://www.jianshu.com/u/4302480a3e8e",
-            "icon": "fa-solid fa-book",
-            "type": "fontawesome",
-        },
-        {
-            "name": "B站",
-            "url": "https://space.bilibili.com/252192181",
-            "icon": "fa-brands fa-bilibili",
-            "type": "fontawesome",
-        },
-        {
-            "name": "博客园",
-            "url": "https://www.cnblogs.com/q735613050/",
-            "icon": "https://xinetzone.github.io/xinetzone/media/xinetzone.jpg",
-            "type": "url",
-        },
-        {
-            "name": "领英",
-            "url": "https://www.linkedin.com/in/xinet",
-            "icon": "fa-brands fa-linkedin",
-            "type": "fontawesome",
-        },
-        # {
-        #     "name": "GitLab",
-        #     "url": "https://gitlab.com/<your-org>/<your-repo>",
-        #     "icon": "fa-brands fa-square-gitlab",
-        #     "type": "fontawesome",
-        # },
-        # {
-        #     "name": "Twitter",
-        #     "url": "https://twitter.com/<your-handle>",
-        #     "icon": "fa-brands fa-square-twitter",
-        #     # The default for `type` is `fontawesome` so it is not actually required in any of the above examples as it is shown here
-        # },
-        # {
-        #     "name": "Mastodon",
-        #     "url": "https://<your-host>@<your-handle>",
-        #     "icon": "fa-brands fa-mastodon",
-        # },
-    ],
-    # "use_download_button": True,
-    # "toc_title": "导航",
-    # "single_page": True,
+
+thebe_config = {
+    "repository_url": "https://github.com/xinetzone/DaoField",
+    "path_to_docs": "doc",
+    "repository_branch": "main",
+    "selector": "div.highlight",
+    # "selector": ".thebe",
+    # "selector_input": "",
+    # "selector_output": "",
+    # "codemirror-theme": "blackboard",  # Doesn't currently work
+    # "always_load": True,  # To load thebe on every page
 }
 
-html_sidebars = {
-    "contribute/index": [
-        "search-field",
-        "sidebar-nav-bs",
-        "custom-template",
-    ],  # This ensures we test for custom sidebars
-    "demo/no-sidebar": [],  # Test what page looks like with no sidebar items
+html_theme_options = {
+    "path_to_docs": "doc",
+    "repository_url": "https://github.com/xinetzone/DaoField",
+    "repository_branch": "main",
+    "launch_buttons": {
+        "binderhub_url": "https://mybinder.org",
+        "colab_url": "https://colab.research.google.com/",
+        "deepnote_url": "https://deepnote.com/",
+        "notebook_interface": "jupyterlab",
+        "thebe": True,
+        # "jupyterhub_url": "https://datahub.berkeley.edu",  # For testing
+    },
+    "use_edit_page_button": True,
+    "use_source_button": True,
+    "use_issues_button": True,
+    # "use_repository_button": True,
+    "use_download_button": True,
+    "use_sidenotes": True,
+    "show_toc_level": 2,
+    # "announcement": (
+    #     "⚠️The latest release refactored our HTML, "
+    #     "so double-check your custom CSS rules!⚠️"
+    # ),
 }
 
 html_context = {
