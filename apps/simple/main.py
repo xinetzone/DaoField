@@ -4,12 +4,15 @@ set_start_method("spawn", force=True)
 from fastapi import FastAPI
 from nicegui import app as gui, ui
 from routers import test
+from utils import head, header, footer
 
 gui.include_router(test.router)
 
 @ui.page('/')
-def show():
-    ui.label('Hello, FastAPI!')
+def root():
+    head.add_head_html()
+    header.create_header()
+    footer.create_footer()
 
     # NOTE 深色模式将为每个用户在标签页和服务器重启之间保持持久
     ui.dark_mode().bind_value(gui.storage.user, 'dark_mode')

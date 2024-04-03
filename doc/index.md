@@ -5,8 +5,6 @@
 :maxdepth: 2
 
 tutorials/index
-topics/index
-chaos/index
 about/index
 ```
 
