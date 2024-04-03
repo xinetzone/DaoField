@@ -1,4 +1,11 @@
-# NiceGUI 文档
+# Deta 部署（暂未成功）
+
+```bash
+space login
+space new
+space push
+space release
+```
 
 启动服务：
 

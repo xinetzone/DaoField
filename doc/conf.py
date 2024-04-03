@@ -46,7 +46,7 @@ extensions = [
     "sphinx.ext.graphviz",
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
-    # "sphinx_thebe",
+    "sphinx_thebe",
     "sphinx_sitemap",
     "sphinx_design",
 ]
@@ -155,7 +155,10 @@ elif "rc" in version:
     switcher_version = version.split("rc")[0] + " (rc)"
 html_baseurl = "https://xinetzone.github.io/DaoField"
 autosummary_generate = True
+
 html_theme_options = {
+    "launch_buttons": {"thebelab": True},
+    "navigation_with_keys": False,  # To prevent an unnecessary warning
     "switcher": {
         "json_url": json_url,
         "version_match": switcher_version
@@ -272,3 +275,16 @@ comments_config = {
         "optional": "config",
     }
 }
+
+thebe_config = {
+    "repository_url": "https://github.com/xinetzone/DaoField",
+    "path_to_docs": "doc",
+    "repository_branch": "main",
+    "selector": "div.highlight",
+    # "selector": ".thebe",
+    # "selector_input": "",
+    # "selector_output": "",
+    # "codemirror-theme": "blackboard",  # Doesn't currently work
+    # "always_load": True,  # To load thebe on every page
+}
+

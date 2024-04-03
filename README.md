@@ -48,16 +48,14 @@
 pip install dao-field
 ```
 
-## on-air
+启用开发模式，可以直接测试一些常用应用：
 
-- [fastapi 支持](https://asia-south.on-air.io/xinetzone/test/)
-
-## Deta 部署
-
-```bash
-space login
-space new
-space push
-space release
+```sh
+pip install dao-field[dev]
 ```
+
+## on-air 服务
+
+- [AI 空间](https://asia-south.on-air.io/xinetzone/ai/)
+
 

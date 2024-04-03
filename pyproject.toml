@@ -13,7 +13,8 @@ requires-python = ">=3.10"
 dependencies = [
   "d2py",
   "fastapi",
-  "nicegui"
+  "nicegui",
+  "mdformat-myst",
 ]
 
 maintainers = [
@@ -33,6 +34,9 @@ classifiers = [
 Home = "https://github.com/xinetzone/DaoField"
 
 [project.optional-dependencies]
+dev = [
+  "uvicorn"
+]
 doc = [
   "myst-nb",
   "xyzstyle",
@@ -44,22 +48,6 @@ doc = [
   "sphinx-sitemap",
   "sphinx-comments",
   "invoke",
-]
-
-coverage = [
-  "pytest-cov",
-  "pytest-regressions",
-  "codecov",
-  "dao_field[test]",
-]
-dev = [
-  "pyyaml",
-  "pre-commit",
-  "note-demo[coverage]",
-]
-test = [
-  "pytest",
-  "dao_field[doc]",
 ]
 
 [tool.flit.sdist]
