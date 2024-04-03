@@ -192,6 +192,7 @@ html_theme_options = {
     #     "⚠️The latest release refactored our HTML, "
     #     "so double-check your custom CSS rules!⚠️"
     # ),
+    "navigation_with_keys": True
 }
 
 html_context = {
