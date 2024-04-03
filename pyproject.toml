@@ -14,7 +14,6 @@ dependencies = [
   "d2py",
   "fastapi",
   "nicegui",
-  "mdformat-myst",
 ]
 
 maintainers = [
@@ -35,11 +34,14 @@ Home = "https://github.com/xinetzone/DaoField"
 
 [project.optional-dependencies]
 dev = [
-  "uvicorn"
+  "uvicorn",
+  "invoke"
 ]
 doc = [
+  "sphinx==7.2.5",
   "myst-nb",
   "xyzstyle",
+  "sphinx_book_theme",
   "sphinx-copybutton",
   # "sphinxcontrib-bibtex",
   "sphinx-thebe",
