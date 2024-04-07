@@ -192,7 +192,19 @@ html_theme_options = {
     #     "⚠️The latest release refactored our HTML, "
     #     "so double-check your custom CSS rules!⚠️"
     # ),
-    "navigation_with_keys": True
+    "navigation_with_keys": True,
+    "switcher": {
+        "json_url": json_url,
+        "version_match": switcher_version,
+    },
+    "collapse_navigation": False,
+    "navbar_align": "content",  # "right", "left", "content"
+    # "navbar_start": "navbar-logo.html",
+    "navbar_center": "navbar-nav.html",
+    "navbar_end": ["theme-switcher", "version-switcher", "navbar-icon-links"],
+    # "secondary_sidebar_items": ["page-toc.html", "edit-this-page.html"],
+    "footer_start": ["copyright", "sphinx-version"],
+    "footer_end": ["last-updated", ],
 }
 
 html_context = {
