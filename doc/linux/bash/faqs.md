@@ -1,4 +1,4 @@
-# FAQs
+# Bash FAQs
 
 ## 详解 shell 中 `source`、`sh`、`bash`、`./` 执行脚本的区别
 

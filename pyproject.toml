@@ -35,7 +35,8 @@ Home = "https://github.com/xinetzone/DaoField"
 [project.optional-dependencies]
 dev = [
   "uvicorn",
-  "invoke"
+  "invoke",
+  "dash",
 ]
 doc = [
   "sphinx==7.2.5",
