@@ -2,6 +2,8 @@
 
 ```{toctree}
 fastapi/index
-nicegui <https://xinetzone.github.io/vision/ext/nicegui/>
+NiceGUI <https://xinetzone.github.io/vision/ext/nicegui/>
+Dash <https://xinetzone.github.io/vision/ext/dash/index.html>
+pygis/index
 others/index
 ```
