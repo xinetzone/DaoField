@@ -1,4 +1,4 @@
-# 配置
+# NiceGUI 配置
 
 ```{toctree}
 URLs

@@ -1,4 +1,4 @@
-# 控件
+# NiceGUI 控件
 
 ```{toctree}
 button

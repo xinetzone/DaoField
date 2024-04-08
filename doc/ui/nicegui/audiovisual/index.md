@@ -1,4 +1,4 @@
-# 音视频元素
+# NiceGUI 音视频元素
 
 ```{toctree}
 image

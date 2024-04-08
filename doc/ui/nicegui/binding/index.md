@@ -1,4 +1,4 @@
-# 绑定
+# NiceGUI 绑定
 
 ```{toctree}
 bind

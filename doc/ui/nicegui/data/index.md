@@ -1,4 +1,4 @@
-# 数据
+# NiceGUI 数据
 
 ```{toctree}
 code

@@ -1,4 +1,4 @@
-# 文本组件
+# NiceGUI 文本组件
 
 ```{toctree}
 label

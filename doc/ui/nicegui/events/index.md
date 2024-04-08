@@ -1,4 +1,4 @@
-# 动作和事件
+# NiceGUI 动作和事件
 
 ```{toctree}
 timer

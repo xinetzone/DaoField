@@ -1,4 +1,4 @@
-# 外观
+# NiceGUI 外观
 
 ```{toctree}
 styling
