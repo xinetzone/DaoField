@@ -1,20 +1,11 @@
 from fastapi import FastAPI
 from nicegui import app as gui, ui
 
-class status_label(ui.label):
-    def _handle_text_change(self, text: str) -> None:
-        super()._handle_text_change(text)
-        if text == 'ok':
-            self.classes(replace='text-positive')
-        else:
-            self.classes(replace='text-negative')
 
 @ui.page('/')
 async def home():
-    model = {'status': 'error'}
-    status_label().bind_text_from(model, 'status')
-    ui.switch(on_change=lambda e: model.update(status='ok' if e.value else 'error'))
-
+    with ui.link(target='https://github.com/zauberzeug/nicegui'):
+        ui.image('https://picsum.photos/id/41/640/360').classes('w-64')
 
 app = FastAPI()
 ui.run_with(
