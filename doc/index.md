@@ -6,6 +6,7 @@
 
 ui/index
 tutorials/index
+linux/index
 about/index
 ```
 

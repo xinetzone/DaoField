@@ -1,0 +1,5 @@
+# Bash
+
+```{toctree}
+faqs
+```
