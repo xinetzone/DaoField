@@ -87,13 +87,33 @@ html_css_files = [
 # 避免将 jupter 执行报错的信息输出到 cmd
 nb_merge_streams = True
 nb_execution_allow_errors = True
-nb_execution_mode = 'off'
-
+nb_execution_mode = "cache" # "cache", "off"
+# nbsphinx_assume_equations = False
 nb_mime_priority_overrides = [
     ('html', 'text/plain', 0),  # 最高级别
     ('latex', 'image/jpeg', None),  # 禁用
-    # ('*', 'customtype', 20)
+    # ("html", "application/vnd.jupyter.widget-view+json", 10),
+    ("html", "application/vnd.plotly.v1+json", 7),
+    ('*', 'customtype', 20)
+    # ("image", "image/svg+xml", None)
+    # (
+    #     ,
+    #     "application/javascript",
+    #     "text/html",
+    #     "image/svg+xml",
+    #     "image/png",
+    #     "image/jpeg",
+    #     "text/markdown",
+    #     "text/latex",
+    #     "text/plain",
+    # ), 0)
 ]
+# application/vnd.plotly.v1+json and application/vnd.bokehjs_load.v0+json
+# unknown_mime_type - application/vnd.plotly.v1+json and application/vnd.bokehjs_load.v0+json
+# domains - sphinx_proof.domain::prf needs to have `resolve_any_xref` method
+# mime_priority - latex priority not set in myst_nb for text/html, application/javascript
+suppress_warnings = ["mystnb.unknown_mime_type", "myst.domains", "mystnb.mime_priority"]
+
 
 # -- 国际化输出 ----------------------------------------------------------------
 gettext_compact = False
@@ -122,8 +142,6 @@ html_logo = '_static/images/logo.jpg'
 html_favicon = '_static/images/favicon.jpg'
 
 html_last_updated_fmt = '%Y-%m-%d, %H:%M:%S'
-
-
 
 extlinks = {
     # 'duref': ('https://docutils.sourceforge.io/docs/ref/rst/'
@@ -248,4 +266,5 @@ thebe_config = {
     # "codemirror-theme": "blackboard",  # Doesn't currently work
     # "always_load": True,  # To load thebe on every page
 }
+
 
