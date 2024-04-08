@@ -10,4 +10,5 @@ horizontal-vertical-shapes
 graph-objects
 shapes
 maps/index
+chart-events/index
 ```

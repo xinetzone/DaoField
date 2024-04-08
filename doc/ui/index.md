@@ -3,7 +3,7 @@
 ```{toctree}
 plotly/index
 fastapi/index
-NiceGUI <https://xinetzone.github.io/vision/ext/nicegui/>
+nicegui/index
 dash/index
 pygis/index
 others/index
