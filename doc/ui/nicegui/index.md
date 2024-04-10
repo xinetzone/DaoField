@@ -13,6 +13,6 @@ layout/index
 appearance/index
 events/index
 pages/index
-Config/index
+config/index
 deploy/index
 ```

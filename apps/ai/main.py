@@ -1,11 +1,18 @@
 from fastapi import FastAPI
-from nicegui import app as gui, ui
+from nicegui import app as gui, ui, run
+import requests
+from datetime import datetime
 
+async def handle_click():
+    URL = 'https://httpbin.org/delay/1'
+    response = await run.io_bound(requests.get, URL, timeout=3)
+    ui.notify(f'Downloaded {len(response.content)} bytes')
 
 @ui.page('/')
 async def home():
-    with ui.link(target='https://github.com/zauberzeug/nicegui'):
-        ui.image('https://picsum.photos/id/41/640/360').classes('w-64')
+    ui.button('Compute', on_click=handle_click)
+    log = ui.log().classes('w-full').style()
+    ui.button('Log time', on_click=lambda: log.push(datetime.now().strftime('%X.%f')[:-5]))
 
 app = FastAPI()
 ui.run_with(

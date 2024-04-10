@@ -163,7 +163,8 @@ extlinks = {
 intersphinx_mapping = {
     'python': ('https://daobook.github.io/cpython/', None),
     'tvm': ('https://daobook.github.io/tvm/', None),
-    "mxnet": ("https://mxnet.incubator.apache.org/versions/1.9.0/api/python/docs", None)
+    "mxnet": ("https://mxnet.incubator.apache.org/versions/1.9.0/api/python/docs", None),
+    # "NiceGUI": ("https://nicegui.io", None),
 }
 
 # ``pydata-sphinx-theme`` 配置
