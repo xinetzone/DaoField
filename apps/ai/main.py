@@ -1,22 +1,61 @@
+from fastapi.responses import RedirectResponse
+from starlette.middleware.base import BaseHTTPMiddleware
+from fastapi import Request
 from fastapi import FastAPI
-from nicegui import app as gui, ui, run
-import requests
-from datetime import datetime
+from nicegui import Client, app as gui, ui
 
-async def handle_click():
-    URL = 'https://httpbin.org/delay/1'
-    response = await run.io_bound(requests.get, URL, timeout=3)
-    ui.notify(f'Downloaded {len(response.content)} bytes')
+ui.link('go to router', '/login')
+
+unrestricted_page_routes = {'/login'}
+
+passwords = {'admin': 'admin'}
+class AuthMiddleware(BaseHTTPMiddleware):
+    """This middleware restricts access to all NiceGUI pages.
+
+    It redirects the user to the login page if they are not authenticated.
+    """
+
+    async def dispatch(self, request: Request, call_next):
+        if not gui.storage.user.get('authenticated', False):
+            if request.url.path in Client.page_routes.values() and request.url.path not in unrestricted_page_routes:
+                gui.storage.user['referrer_path'] = request.url.path  # remember where the user wanted to go
+                return RedirectResponse('/login')
+        return await call_next(request)
+
+# gui.include_router(test.router)
+gui.add_middleware(AuthMiddleware)
+# in reality users passwords would obviously need to be hashed
+
+@ui.page('/login')
+def login() -> RedirectResponse|None:
+    def try_login() -> None:  # local function to avoid passing username and password as arguments
+        if passwords.get(username.value) == password.value:
+            gui.storage.user.update({'username': username.value, 'authenticated': True})
+            ui.navigate.to(gui.storage.user.get('referrer_path', '/'))  # go back to where the user wanted to go
+        else:
+            ui.notify('Wrong username or password', color='negative')
+
+    if gui.storage.user.get('authenticated', False):
+        return RedirectResponse('/')
+    with ui.card().classes('absolute-center'):
+        username = ui.input('user').on('keydown.enter', try_login)
+        password = ui.input('password', password=True, password_toggle_button=True).on('keydown.enter', try_login)
+        ui.button('Login', on_click=try_login)
+    return None
 
 @ui.page('/')
-async def home():
-    ui.button('Compute', on_click=handle_click)
-    log = ui.log().classes('w-full').style()
-    ui.button('Log time', on_click=lambda: log.push(datetime.now().strftime('%X.%f')[:-5]))
+async def index():
+    with ui.column().classes('absolute-center items-center'):
+        ui.label(f'Hello {gui.storage.user["username"]}!').classes('text-2xl')
+        ui.button(on_click=lambda: (gui.storage.user.clear(), ui.navigate.to('/login')), icon='logout') \
+            .props('outline round')
 
 app = FastAPI()
 ui.run_with(
     app,
-    # mount_path='/gui',  # NOTE 如果你希望传递给 `@ui.page` 的路径位于根目录，这个可以省略
+    # favicon="",
+    # mount_path='/xinetzone/ai',  # NOTE 如果你希望传递给 `@ui.page` 的路径位于根目录，这个可以省略
     storage_secret='在这里选择你的私人密钥',  # NOTE 设置密钥是可选的，但允许每个用户进行持久存储。
+    on_air="True",
+    # on_air="xAROQqAIRecc2tZ0",
 )
