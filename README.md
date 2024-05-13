@@ -58,4 +58,19 @@ pip install dao-field[dev]
 
 - [AI 空间](https://asia-south.on-air.io/xinetzone/ai/)
 
+## 导出 docx
+
+安装 [mystmd](https://mystmd.org/guide/quickstart):
+
+```bash
+# Visit https://nodejs.org or:
+conda install -c conda-forge nodejs
+conda install mystmd -c conda-forge
+pip install python-slugify
+```
+
+
+```bash
+inv doc.build --opts "-b docx" -t ./doc/_build/docx
+```
 

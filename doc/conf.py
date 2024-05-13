@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path('__file__').resolve().parents[1]
-sys.path.extend([str(ROOT/'src')])
+sys.path.extend([str(ROOT/'src'), str(ROOT/"doc/_ext")])
 import dao_field
 
 if sys.platform == 'win32':
@@ -21,7 +21,7 @@ if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 project = 'DaoField'
-copyright = '2022, xinetzone'
+copyright = '2024, xinetzone'
 author = 'xinetzone'
 
 # The full version, including alpha/beta/rc tags
@@ -35,6 +35,7 @@ release = dao_field.__version__
 # ones.
 extensions = [
     "xyzstyle",
+    "docxbuilder",
     'myst_nb',
     'sphinx.ext.intersphinx',
     'sphinx_copybutton',
