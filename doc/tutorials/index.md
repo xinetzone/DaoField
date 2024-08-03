@@ -4,5 +4,6 @@
 - [markdown-it-py](https://daobook.github.io/markdown-it-py)
 
 ```{toctree}
+book
 tips
 ```
