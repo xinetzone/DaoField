@@ -2,6 +2,7 @@
 
 ```{toctree}
 plotly/index
+sg/index
 fastapi/index
 nicegui/index
 dash/index
