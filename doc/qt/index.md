@@ -1,5 +1,0 @@
-# Qt
-
-```{toctree}
-opencv
-```

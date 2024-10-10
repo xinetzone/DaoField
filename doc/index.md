@@ -4,7 +4,6 @@
 ```{toctree}
 :maxdepth: 2
 
-qt/index
 ui/index
 tutorials/index
 linux/index
