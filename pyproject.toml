@@ -12,8 +12,6 @@ requires-python = ">=3.10"
 
 dependencies = [
   "d2py",
-  "fastapi",
-  "nicegui",
 ]
 
 maintainers = [
@@ -37,6 +35,8 @@ dev = [
   "uvicorn",
   "invoke",
   "dash",
+  "fastapi",
+  "nicegui",
   "lxml",
 ]
 doc = [
